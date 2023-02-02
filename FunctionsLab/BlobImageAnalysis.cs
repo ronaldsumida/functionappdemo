@@ -52,7 +52,7 @@ namespace FunctionsLab
         // Writes a blob to a specified container and stores metadata with it
         private static async Task StoreBlobWithMetadataAsync(Stream image, string containerName, string blobName, ImageAnalysisInfo info, ILogger log)
         {
-            log.LogInformation($"Writing blob and metadata to \"{containerName}\" container...");
+            log.LogInformation($"Writing blob and metadata from new version of BlobImageAnalysis to \"{containerName}\" container...");
 
             //var connection = "DefaultEndpointsProtocol=https;AccountName=msfunctionlab;AccountKey=YsqHTIllAxnIvaoPbaUK3XGXVSEXjNM/oViScgH6FKWkkGWCF4165eYQ/CO5WqtuZPwQRcGfOFXP+AStWUjxSg==;EndpointSuffix=core.windows.net";
             var connection = Environment.GetEnvironmentVariable("AzureWebJobsStorage");
